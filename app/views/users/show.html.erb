@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title><%= @user.name %>'s Info: </title>
-</head>
+	<h1><%= @user.name %>'s Info: </h1>
 <body>
-
+  <ul> 
+    <li> Wins: <%= @user.wins %> </li> 
+    <li> Losses: <%= @user.losses %> </li>
+  </ul>
+  <%= button_to "Show me the others.", users_path, method: :get%>
+  <%= button_to "Modify this player.", edit_user_path, method: :get%>
+  <%= button_to "Delete this player", user_path(@user), method: :delete%>
 </body>
 </html>
