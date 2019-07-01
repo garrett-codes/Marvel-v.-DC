@@ -43,8 +43,8 @@ ActiveRecord::Schema.define(version: 2019_06_28_215328) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.integer "wins"
-    t.integer "losses"
+    t.integer "wins", default: 0
+    t.integer "losses", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
